@@ -57,7 +57,7 @@
             if (event.key === 'ArrowRight'){
                 replace.style.left= startPositionLeft+50+'px';
                 currentPositionLeft=parseInt(replace.style.left);
-                if (elemPoints.right>=document.documentElement.clientWidth-25){
+                if (elemPoints.right>=document.documentElement.clientWidth-25){               /*в этих местах у меня кастыль*/
                     replace.style.left= ((document.documentElement.clientWidth-elemPoints.width/2) - step*2)+ 'px';
                     replace.classList.add('crush');
                     setTimeout(function () {
@@ -68,7 +68,7 @@
             if (event.key === 'ArrowLeft'){
                 replace.style.left= startPositionLeft-50+'px';
                 currentPositionLeft=replace.style.left;
-                if (elemPoints.left<=35){
+                if (elemPoints.left<=35){                                                   /*в этих местах у меня кастыль*/
                     replace.style.left= (elemPoints.width/2 + step*2)+ 'px';
                     replace.classList.add('crush');
                     setTimeout(function () {
@@ -79,7 +79,7 @@
             if (event.key === 'ArrowUp'){
                 replace.style.top= startPositionTop-50+'px';
                 currentPositionTop=replace.style.top;
-                if (elemPoints.top<=35){
+                if (elemPoints.top<=35){                                                   /*в этих местах у меня кастыль*/
                     replace.style.top= (elemPoints.height/2 + step*2)+ 'px';
                     replace.classList.add('crush');
                     setTimeout(function () {
@@ -91,7 +91,7 @@
             if (event.key === 'ArrowDown'){
                 replace.style.top= startPositionTop+50+'px';
                 currentPositionTop=replace.style.top;
-                if (elemPoints.bottom>=document.documentElement.clientHeight-35){
+                if (elemPoints.bottom>=document.documentElement.clientHeight-35){       /*в этих местах у меня кастыль*/
                     replace.style.top= ((document.documentElement.clientHeight-elemPoints.height/2) - step*2)+ 'px';
                     replace.classList.add('crush');
                     setTimeout(function () {
