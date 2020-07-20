@@ -49,6 +49,11 @@
                 currentPositionLeft=0;
                 currentPositionTop=0;
                 elemPoints = replace.getBoundingClientRect();
+
+            console.log("("+elemPoints.top+' верх элемента)'+"("+elemPoints.bottom+" низ элемента)"+"("+elemPoints.left+" левый край элемента)"+"("+elemPoints.right+" правый край элемента)");
+            console.log(document.documentElement.clientWidth +'    ширина окна');
+            console.log(document.documentElement.clientHeight +'    высота окна');
+
             if (event.key === 'ArrowRight'){
                 replace.style.left= startPositionLeft+50+'px';
                 currentPositionLeft=parseInt(replace.style.left);
@@ -94,9 +99,7 @@
                     },2000)
                 }
             }
-            console.log(replace.getBoundingClientRect());
-            console.log(document.documentElement.clientWidth +'    ширина окна');
-            console.log(document.documentElement.clientHeight +'    высота окна');
+
         };
     </script>
 </body>
